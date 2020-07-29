@@ -16,7 +16,6 @@ class CustomersRepository implements ICustomersRepository {
       name,
       email,
     });
-
     await this.ormRepository.save(customer);
 
     return customer;
