@@ -4,8 +4,6 @@ import AppError from '@shared/errors/AppError';
 
 import IProductsRepository from '@modules/products/repositories/IProductsRepository';
 import ICustomersRepository from '@modules/customers/repositories/ICustomersRepository';
-import ProductsController from '@modules/products/infra/http/controller/ProductsController';
-import IUpdateProductsQuantityDTO from '@modules/products/dtos/IUpdateProductsQuantityDTO';
 import Order from '../infra/typeorm/entities/Order';
 import IOrdersRepository from '../repositories/IOrdersRepository';
 
@@ -17,12 +15,6 @@ interface IProduct {
 interface IRequest {
   customer_id: string;
   products: IProduct[];
-}
-
-interface IProduc2 {
-  product_id: string;
-  price: number;
-  quantity: number;
 }
 
 @injectable()
